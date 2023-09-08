@@ -50,6 +50,5 @@ class BaseModel:
         serial_dict = self.__dict__.copy()
         serial_dict["created_at"] = self.created_at.isoformat()
         serial_dict["updated_at"] = self.updated_at.isoformat()
-
         serial_dict["__class__"] = class_name
         return serial_dict
