@@ -1,18 +1,29 @@
-import uuid
+from uuid import uuid4
 from datetime import datetime
 
 """
-
+Base Model Class
 """
-class BaseModel():
+class BaseModel:
     """
-    Model that defines all common attributes for other classes
+    Model that defines all common attributes for other objects
+
+    id: (str) unique id of each object
+    created_at: (datetime) time of creation
+    updated_at: (datetime) time of last update
+    
+    updated_at and created_at are automatically set to the current date
+    and time when an instance is created or updated
+
+    updated time will be updated whenever an instance is changed
+
     """
-    def __init__(self, id, created_at, updated_at):
+
+    def __init__(self):
         """
         Initialize the BaseModel class
         """
-        self.id = str(uuid.uuid4())
+        self.id = str(uuid4())
         self.created_at = datetime.now()
         self.updated_at = datetime.now()
 
