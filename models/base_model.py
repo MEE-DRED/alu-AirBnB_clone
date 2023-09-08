@@ -1,9 +1,11 @@
-from uuid import uuid4
-from datetime import datetime
-
+#!/usr/bin/python3
 """
 Base Model Class
 """
+from uuid import uuid4
+from datetime import datetime
+
+
 class BaseModel:
     """
     Model that defines all common attributes for other objects
@@ -11,7 +13,7 @@ class BaseModel:
     id: (str) unique id of each object
     created_at: (datetime) time of creation
     updated_at: (datetime) time of last update
-    
+
     updated_at and created_at are automatically set to the current date
     and time when an instance is created or updated
 
@@ -29,19 +31,20 @@ class BaseModel:
 
     def __str__(self):
         """
-        
+        Return a string representation of the BaseModel class
         """
-        return "[{}] ({}) {}".format(self.__class__.__name__, self.id, self.__dict__)
-    
+        return "[{}] ({}) {}".format(self.__class__.__name__,
+                                     self.id, self.__dict__)
+
     def save(self):
         """
-        
+        Update the updated_at attribute with the current datetime
         """
         self.updated_at = datetime.now()
 
     def to_dict(self):
         """
-        
+        Retutn a dictionary representation of the BaseModel class
         """
         class_name = self.__class__.__name__
         serial_dict = self.__dict__.copy()
@@ -50,4 +53,3 @@ class BaseModel:
 
         serial_dict["__class__"] = class_name
         return serial_dict
-        
