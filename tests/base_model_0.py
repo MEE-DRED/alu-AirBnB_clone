@@ -68,3 +68,7 @@ class TestBaseModel(unittest.TestCase):
         """
         self.assertTrue(hasattr(self.base, "__str__"))
         self.assertTrue(type(self.base.__str__()) is str)
+
+
+if __name__ == "__main__":
+    unittest.main()
