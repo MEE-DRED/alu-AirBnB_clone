@@ -10,7 +10,7 @@ import models
 import unittest
 from datetime import datetime
 from time import sleep
-from models.user import User
+from models.state import State
 
 
 class TestState_instantiation(unittest.TestCase):
