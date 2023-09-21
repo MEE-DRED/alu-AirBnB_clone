@@ -16,9 +16,8 @@ button {
     width: 20%;
     border: 0;
     border-radius: 4px;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
+    top: 15%;
+    right: 30px;
 }
 
 button:hover {
@@ -27,26 +26,30 @@ button:hover {
 
 
 .filters div {
-    display: inline-block;
-    position: relative;
-    height: 100%;
-    width: 25%;  
-}
-
-.filters .locations {
-    border-right: 1px solid #DDDDDD;
+    display: inline-grid;
 }
 
 .filters h3 {
-    margin-left: 15%;;
+    margin-left: 15%;
     font-weight: 600;
-    line-height: 100%;
+    margin-bottom: 0;
 }
 .filters h4 {
     margin-left: 15%;
+    margin-top: 0;
     font-weight: 400;
     font-size: 14px;
-    line-height: 0;
+}
+
+.locations {
+    height: 100%;
+    width: 25%;
+    border-right: 1px solid #DDDDDD;
+}
+
+.amenities {
+    height: 100%;
+    width: 25%;
 }
 
 
