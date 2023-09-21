@@ -78,12 +78,9 @@ button:hover {
 
 .amenities .popover {
     margin-left: -3px;
-    margin-top: 1%;
 }
 
-.locations .popover {
-    margin-top: 1%;
-}
+
 
 .popover ul {
     list-style-type: none;
